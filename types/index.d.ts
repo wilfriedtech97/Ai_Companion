@@ -23,7 +23,6 @@ type Companion = Models.DocumentList<Models.Document> & {
   subject: Subject;
   topic: string;
   duration: number;
-  bookmarked: boolean;
 };
 
 interface CreateCompanion {
@@ -64,7 +63,6 @@ interface Avatar {
   height: number;
   className?: string;
 }
-
 
 interface SavedMessage {
   role: "user" | "system" | "assistant";
