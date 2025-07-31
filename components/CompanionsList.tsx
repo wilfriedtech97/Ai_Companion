@@ -2,7 +2,6 @@
 import {
     Table,
     TableBody,
-    TableCaption,
     TableCell,
     TableHead,
     TableHeader,
@@ -33,9 +32,9 @@ const CompanionsList = ({ title, companions, classNames }: CompanionsListProps) 
                 </TableHeader>
                 <TableBody>
                     {companions?.map(({id, subject, name, topic, duration}) => (
-                        <TableRow key={`${title}-${id}`}>
+                        <TableRow key={id}>
                             <TableCell>
-                                <Link href={`/companions/${id}`}>
+                                <Link href={`/Companions/${id}`}>
                                     <div className="flex items-center gap-2">
                                         <div className="size-[72px] flex items-center justify-center rounded-lg max-md:hidden" style={{ backgroundColor: getSubjectColor(subject) }}>
                                             <Image
